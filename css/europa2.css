@@ -1,0 +1,54 @@
+
+#ron {
+    background-color:salmon;
+    text-decoration: green dotted underline;
+    color:white;
+    font-size: 20px;
+}
+#alex {
+    background-color: darkolivegreen;
+    color: lightcoral;
+}
+#faith {
+    background:indigo;
+    color:white;
+    text-decoration: yellow underline;
+}
+#matthew {
+    background-color:darkslateblue;
+    color:peachpuff;
+}
+.star {
+    background: chocolate;
+    color: purple;
+    font-family: "American Typewriter";
+    font-size: 20px;
+}
+td {
+    background: goldenrod;
+    border: 2px solid darkolivegreen;
+
+}
+h1 {
+    text-shadow: crimson 2px 2px 2px;
+}
+#specificity {
+    font-family: fantasy;
+    color: crimson;
+    background-color: burlywood;
+
+}
+body {
+    background-image: url("../img/europa.webp");
+    background-color: #cccccc; /* Used if the image is unavailable */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+
+}
+#specificity:hover {
+    color:blue;
+    font-family: "Great Vibes", cursive;
+    text-decoration: underline;
+}
