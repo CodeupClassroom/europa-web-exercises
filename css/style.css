@@ -1,7 +1,13 @@
-.fancy-header {
-    color: purple; /* single line comment */
-    text-decoration: underline;
+
+.star {
+    background-color: #656555;
+    color: #DAA520;
 }
+
+.fancy-header {
+     color: purple; /* single line comment */
+     text-decoration: underline;
+ }
 
 /* #FF0000 = red*/
 /* #800000 = pink*/
@@ -13,7 +19,7 @@
 /* #000000 = black*/
 /* #FFFFFF = white*/
 
-body {
+#faith, li {
     /*named color*/
     background-color: mediumslateblue;
     /*hex value*/
@@ -22,4 +28,21 @@ body {
     /*background-color: rgb(123,104,238);*/
 }
 
+ol li {
+    text-decoration: underline;
+}
 
+td.star {
+    font-family:cursive;
+}
+
+.star>.voice {
+    font-size:30px;
+}
+
+.voice:hover {
+    font-size:40px;
+    font-family: fantasy;
+    color: darkmagenta;
+    background-color: chartreuse;
+}
