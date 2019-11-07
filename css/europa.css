@@ -1,0 +1,41 @@
+/*this is going to be a helpful comment*/
+#ron {
+    background-color:blue;
+    text-decoration: yellow wavy underline;
+    color:white;font-size: 50px;
+}
+#alex {
+    background-color: purple;
+    color: white;
+}
+#faith {
+    background:indigo;
+    color:white;
+    text-decoration: yellow wavy underline;
+}
+#matthew {
+    background-color:grey;
+    color:white;
+}
+.star {
+    background: lime;
+    color: blue;
+}
+td {
+    background: aquamarine;
+    text-decoration: underline;
+
+}
+h1 {
+    text-shadow: crimson 2px 2px 2px;
+}
+#specificity {
+    font-family: fantasy;
+    color: crimson;
+
+}
+#specificity:hover {
+    color:blue;
+    font-family: "Great Vibes", cursive;
+    text-decoration: underline;
+}
