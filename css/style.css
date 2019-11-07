@@ -2,3 +2,24 @@
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+
+/* #FF0000 = red*/
+/* #800000 = pink*/
+/* #FFFF00 = yellow*/
+/* #00FF00 = green*/
+/* #00FFFF = aqua*/
+/* #0000FF = blue*/
+/* #FF00FF = purple*/
+/* #000000 = black*/
+/* #FFFFFF = white*/
+
+body {
+    /*named color*/
+    background-color: mediumslateblue;
+    /*hex value*/
+    /*background-color: #7B68EE;*/
+    /*RGB value*/
+    /*background-color: rgb(123,104,238);*/
+}
+
+
