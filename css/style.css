@@ -1,4 +1,4 @@
-
+/*@import url("https://fonts.googleapis.com/css?family=Raleway&display=swap");*/
 .star {
     background-color: #656555;
     color: #DAA520;
@@ -9,40 +9,66 @@
      text-decoration: underline;
  }
 
-/* #FF0000 = red*/
-/* #800000 = pink*/
-/* #FFFF00 = yellow*/
-/* #00FF00 = green*/
-/* #00FFFF = aqua*/
-/* #0000FF = blue*/
-/* #FF00FF = purple*/
-/* #000000 = black*/
-/* #FFFFFF = white*/
-
-#faith, li {
-    /*named color*/
-    background-color: mediumslateblue;
-    /*hex value*/
-    /*background-color: #7B68EE;*/
-    /*RGB value*/
-    /*background-color: rgb(123,104,238);*/
+/*Center the main heading*/
+h1 {
+    text-align: center;
 }
 
-ol li {
+/*Add a style to change the color of the headers on your page and make them underlined.*/
+h1, h2, h3, h4, h5, h6 {
+    color: aqua;
     text-decoration: underline;
+
 }
 
-td.star {
-    font-family:cursive;
+/*h1 {*/
+/*    @keyframes fadeIn {*/
+/*        opacity: 0;*/
+/*    } to {*/
+/*        opacity: 1;*/
+/*      animation: fadeIn 5s;*/
+/* }*/
+/*}*/
+/*Add a style to change the background color of the page.*/
+#body {
+    background: darkkhaki;
 }
-
-.star>.voice {
-    font-size:30px;
+/*Add a style to add a background image to your background. Search how to manipulate the position, sizing of this background image.*/
+#body {
+    background-image: url("../img/europa.webp");
+    background-repeat: no-repeat;
+    background-size: auto;
 }
-
-.voice:hover {
-    font-size:40px;
-    font-family: fantasy;
+table {
+    /*background-image: url("../img/GitHub-Mark-32px.png");*/
+}
+/*Add a style to change the list-style to something other than the default bullet.*/
+ul {
+    list-style: square;
+}
+ol {
+    list-style: lower-greek;
+}
+/*Add a style to change the font for the entire page. Use google fonts if you would like.*/
+body {
+    /*font-family: 'Source Sans Pro', sans-serif;*/
+    font-family: "Raleway", sans-serif;
+}
+/*Add a style to change the table, table cells td and rows tr padding and font sizes.*/
+table, tr, td, th {
+    padding : 20px;
+    font-size: x-large;
+}
+/*Add a style to alter the anchor tags and its different states. (e.g. link, visited, hover and active).*/
+a:link {
     color: darkmagenta;
-    background-color: chartreuse;
+}
+a:visited {
+    color: chartreuse;
+}
+a:hover {
+    color: orangered;
+}
+a:active {
+    color: mediumslateblue;
 }

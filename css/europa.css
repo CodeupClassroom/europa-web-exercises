@@ -39,3 +39,31 @@ h1 {
     font-family: "Great Vibes", cursive;
     text-decoration: underline;
 }
+
+/*#faith, li {*/
+/*    !*named color*!*/
+/*    background-color: mediumslateblue;*/
+/*    !*hex value*!*/
+/*    !*background-color: #7B68EE;*!*/
+/*    !*RGB value*!*/
+/*    !*background-color: rgb(123,104,238);*!*/
+/*}*/
+
+/*ol li {*/
+/*    text-decoration: underline;*/
+/*}*/
+
+/*td.star {*/
+/*    font-family:cursive;*/
+/*}*/
+
+/*.star>.voice {*/
+/*    font-size:30px;*/
+/*}*/
+
+/*.voice:hover {*/
+/*    font-size:40px;*/
+/*    font-family: fantasy;*/
+/*    color: darkmagenta;*/
+/*    background-color: chartreuse;*/
+/*}*/
