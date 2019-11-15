@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<h1>Javascript Pushups!</h1>
     <script>
         // Write a javascript function that returns the string "Hello World!"
         function helloWorld() {
@@ -60,14 +61,16 @@
         function firstItem(inputArray){
             return inputArray[0]
         }
-
-        // console.log(firstItem(["dog", "cat", "bird", "fish"]));
-        //
-        // console.log(firstItem(["vivian", "daniel", "justin", "sophie"]));
-        //
-        // console.log(firstItem(["apple", "mango", "grapes"]));
+        // console.log(firstItem(["dog", "cat", "bird", "fish"])); //output: "dog"
+        // console.log(firstItem(["vivian", "daniel", "justin", "sophie"])); // output: "vivian"
+        // console.log(firstItem(["apple", "mango", "grapes"])); // output: "apple"
 
         //Write a js function called arrayLength that takes in an array and returns the length of that array
+        var arrayLength = function (inputArray) {
+            return inputArray.length;
+        }
+        console.log(arrayLength(["dog", "cat", "bird", "fish"])); // output: 4
+        console.log(arrayLength(["apple", "mango", "grapes", "pineapple", "kiwi", "coconut", "dragonfruit"]));
 
 
 
