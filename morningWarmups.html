@@ -77,11 +77,16 @@
             return inputArray[inputArray.length-1];
             // return inputArray.slice(-1)[0];
         }
+        // console.log(lastItem(["dog", "cat", "bird", "fish"])); //output: "fish"
+        // console.log(lastItem(["vivian", "daniel", "justin", "sophie"])); // output: "sophie"
+        // console.log(lastItem(["apple", "mango", "grapes"])); // output: "grapes"
 
-        console.log(lastItem(["dog", "cat", "bird", "fish"])); //output: "fish"
-        console.log(lastItem(["vivian", "daniel", "justin", "sophie"])); // output: "sophie"
-        console.log(lastItem(["apple", "mango", "grapes"])); // output: "grapes"
-
+        //Write a js function called nthItem that takes in an array and a number and returns the nth item from the array
+        var nthItem = function (inputArray, n) {
+            return inputArray[n-1];
+        }
+        console.log(nthItem(["dog", "cat", "bird", "fish"], 14)); //output: "fish"
+        console.log(nthItem(["vivian", "daniel", "justin", "sophie"], 2)); // output: "daniel" or "justin"
 
     </script>
 </body>
