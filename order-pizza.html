@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<title>Hello, world!</title>
+
+	<style>
+		.jumbotron{
+			background-image: url('img/pizza.png');
+			text-align: center;
+		}
+
+		.jumbotron h1{
+			background-color: #ffffff99;
+		}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<div class="container">
+			<a class="navbar-brand" href="#">Pizza World</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Order Online<span class="sr-only">(current)</span></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Menu</a>
+					</li>
+
+					<li>
+						<form class="form-inline my-2 my-lg-0">
+							<input class="form-control mr-sm-2" type="search" placeholder="Zip code" aria-label="Search">
+							<button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">Search stores near you!</button>
+						</form>
+					</li>
+				</ul>
+
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="fas fa-user"></i>
+							Sign Up
+						</a>
+					</li>
+				</ul>
+		</div>
+		</div>
+	</nav>
+
+
+	<div class="container mt-4">
+
+		<div class="jumbotron jumbotron-fluid d-none d-none d-md-block">
+				<h1 class="display-4">Welcome to Pizza World!</h1>
+		</div>
+
+		<h3>Build your own pizza!</h3>
+
+		<ul class="nav nav-tabs" id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="size-tab" data-toggle="tab" href="#size" role="tab" aria-controls="size" aria-selected="true">Size and Crust</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="cheese-tab" data-toggle="tab" href="#cheese" role="tab" aria-controls="cheese" aria-selected="false">Cheese and Sauce</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="topping-tab" data-toggle="tab" href="#topping" role="tab" aria-controls="topping" aria-selected="false">Toppings</a>
+			</li>
+		</ul>
+		<div class="tab-content" id="myTabContent">
+			<div class="tab-pane fade show active" id="size" role="tabpanel" aria-labelledby="size-tab">
+
+				<div class="card ">
+					<div class="card-header bg-primary text-white">
+						Choose size and crust
+					</div>
+
+					<div class="card-body">
+						<div class="card">
+							<div class="card-header">
+								Hand Tossed
+							</div>
+
+							<div class="card-body">
+								<p class="card-text">Garlic seasoned crust, with a rich buttery taste.</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="small-hand-tosssed" value="small">
+										<label class="form-check-label" for="small-hand-tosssed">
+											Small(10")
+										</label>
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="medium-hand-tossed" value="medium">
+										<label class="form-check-label" for="medium-hand-tossed">
+											Medium(12")
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+
+					</div>
+					<!--End card body-->
+
+					<div class="card-body">
+						<div class="card">
+							<div class="card-header">
+								Crispy Thin
+							</div>
+
+							<div class="card-body">
+								<p class="card-text">Thin enough for optimum crispy to cruchy ratio.</p>
+							</div>
+							<ul class="list-group list-group-flush">
+								<li class="list-group-item">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="small-crispy" value="small">
+										<label class="form-check-label" for="small-crispy">
+											Medium(12")
+										</label>
+									</div>
+								</li>
+								<li class="list-group-item">
+									<div class="form-check">
+										<input class="form-check-input" type="radio" name="exampleRadios" id="medium-crispy" value="medium">
+										<label class="form-check-label" for="medium-crispy">
+											Large(14")
+										</label>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<!-- FOOTER STARTS -->
+					<div class="card-footer text-muted text-right">
+						<a href="#" class="btn btn-primary">Next ></a>
+					</div>
+					<!-- FOOTER ENDS -->
+
+				</div>
+
+			</div>
+
+			<div class="tab-pane fade" id="cheese" role="tabpanel" aria-labelledby="cheese-tab">CHEESE AND SAUCE STUFF HERE!</div>
+
+			<div class="tab-pane fade" id="topping" role="tabpanel" aria-labelledby="topping-tab">...</div>
+		</div>
+
+
+
+	</div>
+
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
