@@ -2,7 +2,8 @@
     "use strict";
 // alert("Hello"); // just to make sure things are connected
 console.log("Let's learn about JavaScript Functions!!");
-// functions, procedures, methods, sub-routines
+// function - a series of commands grouped together
+
 // enables code reuse, better than copy/paste
 // 5 - 50 lines of code 👍
 
@@ -31,8 +32,12 @@ function f() {
 // doSomething(32);
 // doSomething("banana");
 // doSomething(f);
+// argument - a value passed in to a function when it is invoked
+// parameter - a placeholder for a value used in creating a function
 // arguments are passed in, parameters are in the function itself
-// params are optional, return is optional
+
+// params are optional
+// return is optional
 
 // function declaration(param){
 //     // this is inside the body of the function
@@ -60,11 +65,11 @@ function f() {
 //     var x = 1;
 //     var y = 2;
 //     var z = 7;
-//     console.log('x: ' + x + ' y: ' + y + ' w: ' + w); // x: 1 y: 2
+//     console.log('x: ' + x + ' y: ' + y + ' w: ' + w); // x: 1 y: 2 w: 777
 //     return x + y;
 // }
 //
-// console.log('x: ' + x + ' y: ' + y); // x: 300 y: 100
+// console.log('x: ' + x + ' y: ' + y + ' w: ' + w); // x: 300 y: 100 w: 777
 // var returnValue = scopeExample();
 // console.log(returnValue); // 3
 // console.log(z); // error
@@ -74,10 +79,5 @@ function f() {
 // (function(){
 //  all the codes
 
-
-
-// function - a series of commands grouped together
-// argument - a value passed in to a function when it is invoked
-// parameter - a placeholder for a value used in creating a function
 
 })();
