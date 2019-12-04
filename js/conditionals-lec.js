@@ -282,34 +282,22 @@ function checkIfGameIsOver(numberOfLives){
 // ================ NESTED STATEMENTS ===============
 //TODO Together: If user is under 15, they are not eligible for a learners permit, else they are. If they are eligible, check age. If they are 15 they are eligible for a learners permit, if they are 16 or older and have a permit, they are eligible for license, if they are 16 or older and do not have a permit, they are not eligible for a license.
 
-var userAge = 17;
-var hasPermit = false;
-
-if(userAge < 15){
-	alert("sorry you're not old enough!");
-} else {
-	if(userAge === 15){
-		alert("you can have a permit! yay!");
-	} else if (userAge >= 16 && hasPermit){
-		alert("you can have a license");
-	} else if (userAge >= 16 && !hasPermit){
-		alert("sorry you need a permit first!");
-	} else {
-		alert("please see front desk!");
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
+// var userAge = 17;
+// var hasPermit = false;
+//
+// if(userAge < 15){
+// 	alert("sorry you're not old enough!");
+// } else {
+// 	if(userAge === 15){
+// 		alert("you can have a permit! yay!");
+// 	} else if (userAge >= 16 && hasPermit){
+// 		alert("you can have a license");
+// 	} else if (userAge >= 16 && !hasPermit){
+// 		alert("sorry you need a permit first!");
+// 	} else {
+// 		alert("please see front desk!");
+// 	}
+// }
 
 
 
@@ -320,7 +308,7 @@ if(userAge < 15){
 //TODO Together: Regular way
 
 // var message;
-// var success = true;
+// var success = false;
 //
 // if (success) {
 //     message = "Operation was successful.";
@@ -328,18 +316,36 @@ if(userAge < 15){
 //     message = "Oops, something went wrong.";
 // }
 // console.log(message);
-
-
-// var success = true;
+//
+//
+//
+//
+// var success = false;
 // var message = (success) ? "Operation was successful from tern." : "Oops, something went wrong from tern.";
+//
 // console.log(message)
+
+// var isAdmin = true;
+//
+// if(isAdmin){
+// 	showAdminNavbar();
+// } else {
+// 	showRegularNavbar();
+// }
+//
+//
+// (isAdmin) ? showAdminNavbar() : showRegularNavbar();
+//
+
+
+
 
 
 //TODO: Refactor the following conditional as a ternary
 
 // var weather = "sunny";
 // var weatherMessage;
-
+//
 // if(weather === "rainy"){
 //    weatherMessage = "It's raining!";
 // } else {
@@ -348,10 +354,33 @@ if(userAge < 15){
 
 //WRITE YOUR TERNARY STATEMENT HERE!
 
+// var weather = "sunny";
+// var weatherMessage = (weather === "rainy") ? "It's raining" : "Have a nice day";
+//
+// console.log(weatherMessage);
 
 
 // =============== SWITCH STATEMENT ================
 //TODO Together:
+
+
+// var pizzaPreference = prompt("What kind of pizza do you like?");
+// console.log("User pizza input: " + pizzaPreference);
+//
+// if (pizzaPreference === "pineapple and hot sauce") {
+//     alert("What a coincidence, that's my favorite!");
+// } else if (pizzaPreference === "cheese") {
+//     alert("Just plain cheese? Okay...");
+// } else if (pizzaPreference === "ham"){
+//     alert("Ham is easy to spell and awesome!");
+// } else {
+//     alert(pizzaPreference + " isn't my favorite, but let's order some!");
+// }
+
+
+
+
+
 
 // var pizzaPreference = prompt("What kind of pizza do you like?");
 //
@@ -362,6 +391,9 @@ if(userAge < 15){
 //     case "cheese":
 //         alert("Just plain cheese? Okay...");
 //         break;
+// 	case "ham":
+// 		alert("ham is nice and easy to spell");
+// 		break;
 //     default:
 //         alert(pizzaPreference + " isn't my favorite, but let's order some!");
 //         break;
@@ -371,7 +403,72 @@ if(userAge < 15){
 //TODO: Write a switch statement that evaluates weather as the condition. Check for "rainy", "sunny", "snow", and a default case.
 
 
+// var weather = "windy";
+//
+//
+// switch (weather) {
+// 	case "rainy":
+// 		alert("its raining");
+// 		break;
+// 	case "sunny":
+// 		alert("its sunny");
+// 		break;
+// 	case "snow":
+// 		alert("its snowing!");
+// 		break;
+// 	default:
+// 		alert("have a nice day!");
+// 		break;
+// }
+
+function checkWeather(weather){
+	var weatherMessage;
+
+	switch(weather){
+		case "rainy":
+			weatherMessage = "its raining";
+			break;
+		case "sunny":
+			weatherMessage = "its sunny";
+			break;
+		case "snow":
+			weatherMessage = "its snowing";
+			break;
+		default:
+			weatherMessage = "have a nice day";
+			break;
+	}
+
+	return weatherMessage;
+
+}
+
+// console.log(checkWeather("sunny"));
+
+
 //TODO: Rewrite the intersection function from earlier as a switch statement.
+
+function checkTrafficLight(trafficLight){
+	var colorMessage;
+
+	switch(trafficLight){
+		case "green":
+			colorMessage = "keep going!";
+			break;
+		case "yellow":
+			colorMessage = "slow down";
+			break;
+		case "red":
+			colorMessage = "stop";
+			break;
+		default:
+			colorMessage = "proceed with caution";
+			break;
+	}
+
+	return colorMessage;
+}
+console.log(checkTrafficLight("red"));
 
 
 
