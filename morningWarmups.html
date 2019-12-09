@@ -185,6 +185,16 @@
         // console.log(seeYouLater("crocodile")); // after a while
         // console.log(seeYouLater("dog")); // so long
 
+        // write a js function that receives another function as a parameter and executes it
+        // then call the function, and pass in an anonymous function as an argument
+        function functionA(callbackFunction) {
+            callbackFunction();
+        }
+
+        functionA(function () {
+            alert("It works!");
+        });
+
 
     </script>
 </body>
