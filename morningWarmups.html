@@ -192,9 +192,25 @@
         }
 
         functionA(function () {
-            alert("It works!");
+            console.log("Callback function works!");
         });
 
+        // write a function called "contains" that receives an array and another param
+        // and returns true if the param is found in the array
+        // there is an easy way, but if you find it maybe try the loop way, too
+        var contains = function(arr, param) {
+            // return arr.includes(param);
+            for (var i = 0;i<arr.length;i++){
+                if (arr[i] === param) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log(contains([1,2,3], 3));
+        console.log(contains(["cat","hat","bat"], "bat"));
+        console.log(contains(["Sunday", "Monday", "airplane", "I want a doughnut"], "airplane"))
+        // console.log(contains([1,2,3], 4));
 
     </script>
 </body>
