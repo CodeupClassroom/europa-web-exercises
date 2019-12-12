@@ -65,7 +65,7 @@ console.log(car.make);
 truck["number Of Wheels"] = 3;
 
 var cars = [
-    car,
+
     {
         make:"Dodge",
         model: "Challenger",
@@ -74,6 +74,7 @@ var cars = [
             console.log(this.year + " " + this.make + " " + this.model);
         }
     },
+    car,
     {
         make:"Ford",
         model:"Shelby GT 500",
@@ -95,8 +96,9 @@ car.report = function() {
     console.log(this.year + " " + this.make + " " + this.model);
 }
 
-cars.forEach(function(car){
-    car.report();
+cars.forEach(function(item, i, list){
+    // list[i].report();
+    item.report();
 })
 
 
