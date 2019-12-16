@@ -10,6 +10,12 @@
         .greenText {
             color:green
         }
+        .purple {
+            color:purple;
+        }
+        .cyan {
+            color:cyan;
+        }
     </style>
 </head>
 <body>
@@ -17,22 +23,15 @@
 <h3>Wish List</h3>
 <ul id="wishList">
 </ul>
+<button id="button">Click Me!</button>
 <a id="codeup" href="http://codeup.com">codeup</a>
 <script>
     console.log(document)
     var header = document.getElementById("header");
     console.log(header);
-    // <li></li>
-    // <li class="even"></li>
-    // <li></li>
-    // <li class="even"></li>
-    // <li> </li>
-    // <li class="even"></li>
+
     var thingsIWant = ["Great Career","Oculus Quest","Nintendo Switch","2 Front Teeth","Macbook Pro 16-inch","Valve Index"];
-    // console.log("evens:"+evens);
-    // evens.forEach(function(even){
-    //     console.log(even);
-    // })  // this won't work!!
+
     var wishList = document.getElementById("wishList");
     var htmlString = "";
     for (var i = 0;i<thingsIWant.length;i++){
@@ -53,20 +52,32 @@
 
     var odds = document.getElementsByClassName("odd");
     for (var i = 0;i<odds.length;i++) {
-
         odds[i].setAttribute("class", "odd redBackground greenText");
-        // odds[i].style.color = "red";
-        // odds[i].style["background-color"] = "green";
     }
 
     var codeupLink = document.getElementById("codeup").getAttribute("href");
     console.log(codeupLink);
 
-    // var lis = document.getElementsByTagName("li");
-    // console.log(lis);
-    // for (var i = 0;i<lis.length;i++){
-    //     console.log(lis[i]);
-    // }
+
+    var clicks = 0;
+    var buttonClick = function(){
+        clicks++;
+        console.log("button was clicked " + clicks + " times")
+    }
+
+    var button = document.getElementById("button");
+    button.addEventListener("click",buttonClick);
+    button.addEventListener("mouseover", function(){
+        button.setAttribute("class", "purple");
+    })
+    button.addEventListener("mouseout", function(){
+        button.setAttribute("class","cyan");
+    })
+
+    setTimeout(function() {
+        button.removeEventListener("click", buttonClick);
+    }, 5000);
+
 
 </script>
 </body>
