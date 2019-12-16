@@ -2,9 +2,72 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>DOM</title>
+    <style>
+        .redBackground {
+            background-color:red
+        }
+        .greenText {
+            color:green
+        }
+    </style>
 </head>
 <body>
-$END$
+<h1 id="header">Happy Holidays</h1>
+<h3>Wish List</h3>
+<ul id="wishList">
+</ul>
+<a id="codeup" href="http://codeup.com">codeup</a>
+<script>
+    console.log(document)
+    var header = document.getElementById("header");
+    console.log(header);
+    // <li></li>
+    // <li class="even"></li>
+    // <li></li>
+    // <li class="even"></li>
+    // <li> </li>
+    // <li class="even"></li>
+    var thingsIWant = ["Great Career","Oculus Quest","Nintendo Switch","2 Front Teeth","Macbook Pro 16-inch","Valve Index"];
+    // console.log("evens:"+evens);
+    // evens.forEach(function(even){
+    //     console.log(even);
+    // })  // this won't work!!
+    var wishList = document.getElementById("wishList");
+    var htmlString = "";
+    for (var i = 0;i<thingsIWant.length;i++){
+        if (i % 2 !== 0)
+            htmlString += "<li class='even'>" + thingsIWant[i] + "</li>";
+        else
+            htmlString += "<li class='odd'>" + thingsIWant[i] + "</li>";
+    }
+    wishList.innerHTML = htmlString;
+    var evens = document.getElementsByClassName("even");
+
+    setTimeout(function(){
+        for (var i = 0;i<evens.length;i++){
+            // console.log(evens[i]);
+            evens[i].innerHTML = "<em>Money</em>";
+            console.log(evens[i].innerHTML);
+        }},7000);
+
+    var odds = document.getElementsByClassName("odd");
+    for (var i = 0;i<odds.length;i++) {
+
+        odds[i].setAttribute("class", "odd redBackground greenText");
+        // odds[i].style.color = "red";
+        // odds[i].style["background-color"] = "green";
+    }
+
+    var codeupLink = document.getElementById("codeup").getAttribute("href");
+    console.log(codeupLink);
+
+    // var lis = document.getElementsByTagName("li");
+    // console.log(lis);
+    // for (var i = 0;i<lis.length;i++){
+    //     console.log(lis[i]);
+    // }
+
+</script>
 </body>
 </html>
