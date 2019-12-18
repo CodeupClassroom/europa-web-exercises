@@ -32,16 +32,27 @@
 </form>
 <button id="button" class="cyan">Click Me!</button>
 <script>
+    var gifts = ["plant", "necktie", "socks", "pony"];
     var button = document.getElementById("button");
     button.addEventListener("click",addGift);
 
     function addGift() {
-        var gift = document.forms.giftForm.gift.value;
-        // var gift = document.getElementById("gift").value;
-        document.getElementById("wishList").innerHTML +=
-            "<li>" + gift + "</li>";
+        // var gift = document.forms.giftForm.gift.value;
+        var gift = document.getElementById("gift").value;
+        gifts.push(gift);
+        renderWishList(); // wipes out wish list, refills it with gifts array
         document.getElementById("gift").value = "";
     }
+
+    function renderWishList() {
+        var giftString = "";
+        gifts.forEach(function(gift) {
+            giftString += "<li>" + gift + "</li>";
+        });
+        document.getElementById("wishList").innerHTML = giftString;
+    }
+
+    renderWishList();
 
 
     // The following is to toggle a class on the button
