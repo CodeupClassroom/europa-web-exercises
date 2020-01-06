@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery Exercises</title>
+    <style>
+        .redBackground {
+            background-color:red
+        }
+        .greenText {
+            color:green
+        }
+        .purple {
+            background:purple;
+        }
+        .cyan {
+            color:cyan;
+        }
+        .outline {
+            border: 1px black solid;
+        }
+        .highlight {
+            background: yellow;
+        }
+    </style>
+</head>
+<body>
+<h1>Happy New Year!</h1>
+<h1>2020 Resolutions</h1>
+<p>These are our Resolutions for the new year.</p>
+<ul id="resolutions">
+    <li class="odd">Gain Weight</li>
+    <div id="important">
+    <li class="codeup">Get an awesome career started!</li>
+    <li class="odd codeup">Spend more time with awesome people</li>
+    </div>
+    <li class="codeup">Meditate More</li>
+    <li>Get Healthier</li>
+    <li class="">Pay off debt</li>
+</ul>
+<form id="codeup" name="resForm" action="">
+    <div>
+        <label for="goal">What do you want to do this year?</label>
+        <input id="goal" name="goal" type="text">
+    </div>
+
+</form>
+<button id="button" class="cyan">Click Me!</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<script>
+    (function () {
+        "use strict";
+        $(document).ready(function () {
+            //our jQuery code goes here
+            // alert(jQuery("#resolutions").html());
+            // $(".codeup").css("border", "1px solid red");
+            $("li").css("font-size", "20px");
+            // $("h1,p,.codeup").addClass("highlight");
+            // alert($("h1").html());
+            $(".codeup").addClass("greenText").hover(mouseOverCodeup,mouseOutCodeup)
+            function mouseOverCodeup(){
+                console.log("hover over");
+            }
+            function mouseOutCodeup() {
+                console.log("hover out");
+            }
+        })
+    })();
+</script>
+</body>
+</html>
