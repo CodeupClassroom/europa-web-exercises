@@ -19,17 +19,26 @@
         .outline {
             border: 1px black solid;
         }
+        .highlight {
+            background: yellow;
+        }
     </style>
 </head>
 <body>
 <h1>Happy New Year!</h1>
-<h3>New Year Resolutions</h3>
+<h1>2020 Resolutions</h1>
+<p>These are our Resolutions for the new year.</p>
 <ul id="resolutions">
     <li class="odd">Gain Weight</li>
-    <li class="important">Get an awesome career started!</li>
-    <li class="odd important">Spend more time with awesome people</li>
+    <div id="important">
+    <li class="codeup">Get an awesome career started!</li>
+    <li class="odd codeup">Spend more time with awesome people</li>
+    </div>
+    <li class="codeup">Meditate More</li>
+    <li>Get Healthier</li>
+    <li class="">Pay off debt</li>
 </ul>
-<form name="resForm" action="">
+<form id="codeup" name="resForm" action="">
     <div>
         <label for="goal">What do you want to do this year?</label>
         <input id="goal" name="goal" type="text">
@@ -44,24 +53,18 @@
         "use strict";
         $(document).ready(function () {
             //our jQuery code goes here
-            // alert("Look, we are using jQuery!");
-           // document.getElementById("button").addEventListener("click", function() {
-           //     alert("You clicked the button.")
-           // });
-
-           $("#button").click(function() {
-               alert("You clicked the button.")
-           });
-
-           // var listItems = document.getElementsByTagName("li");
-           // for (var i = 0;i<listItems.length;i++) {
-           //     listItems[i].setAttribute("class", "purple");
-           // }
-
-            $(".odd").addClass("purple");
-           $(".important").addClass("greenText");
-
-           $("*").addClass("outline");
+            // alert(jQuery("#resolutions").html());
+            // $(".codeup").css("border", "1px solid red");
+            $("li").css("font-size", "20px");
+            // $("h1,p,.codeup").addClass("highlight");
+            // alert($("h1").html());
+            $(".codeup").addClass("greenText").hover(mouseOverCodeup,mouseOutCodeup)
+            function mouseOverCodeup(){
+                console.log("hover over");
+            }
+            function mouseOutCodeup() {
+                console.log("hover out");
+            }
         })
     })();
 </script>
