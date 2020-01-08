@@ -7,9 +7,32 @@
         .invisible {
             visibility: hidden;
         }
+        .bold-font {
+            font-weight: bold;
+        }
+        #x {
+            position: absolute;
+            color: red;
+            font-size: 2em;
+            top: 5px;
+            right: 5px;
+        }
+
+        .red-text {
+            color: red;
+        }
     </style>
 </head>
 <body>
+
+<div id="special-offer">
+    <h1>DO YOU WANT TO SIGN UP FOR MY EXCELLENT NEWSLETTER?!</h1>
+    <p>Learn more about Icelandic nature today! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab adipisci at culpa earum, est exercitationem expedita ipsa iste molestias neque porro quae quas ratione recusandae rerum veniam voluptatem voluptatum? Dignissimos? Assumenda at consectetur eum in qui repellendus sapiente sequi sunt. Alias aut blanditiis, corporis, cupiditate delectus dignissimos eius eligendi esse explicabo impedit incidunt, ipsum modi nulla praesentium quia quod unde. Accusamus ad aliquid asperiores dicta enim exercitationem odit quae rem! Aspernatur ea eos error est, facere illum ipsa ipsum perspiciatis quae quasi qui quidem, rerum similique tempore tenetur vel voluptatum!</p>
+
+    <i id="x" class="far fa-times-circle"></i>
+</div>
+
+<h2 class="red-text">EXCUSE ME! BUT HAVE YOU REGISTERED FOR MY WEBZONE?!</h2>
 
 <dl>
     <dt>Lorem Park</dt>
@@ -47,35 +70,36 @@
 
 <h3>Snæfellsjökull</h3>
 <ul>
-    <li>Stratovolcano</li>
-    <li>Sometimes it may be seen from the city of Reykjavík over Faxa Bay, at a distance of 120 km.</li>
-    <li>The mountain is one of the most famous sites of Iceland, primarily due to the novel Journey to the Center of the Earth (1864) by Jules Verne, in which the protagonists find the entrance to a passage leading to the center of the earth on Snæfellsjökull.</li>
-    <li>In August 2012 the summit was ice-free for the first time in recorded history.</li>
+    <li class="bold-font">Stratovolcano</li>
+    <li class="bold-font">Sometimes it may be seen from the city of Reykjavík over Faxa Bay, at a distance of 120 km.</li>
+    <li class="bold-font">The mountain is one of the most famous sites of Iceland, primarily due to the novel Journey to the Center of the Earth (1864) by Jules Verne, in which the protagonists find the entrance to a passage leading to the center of the earth on Snæfellsjökull.</li>
+    <li class="bold-font">In August 2012 the summit was ice-free for the first time in recorded history.</li>
 </ul>
 
 <h3>Vatnajökull</h3>
 <ul>
-    <li>Vatnajökull National Park is divided into four territories.</li>
-    <li>Vatnajökull is Europe's largest glacier outside the arctic, with a surface area of 8,100 km2.</li>
-    <li>It encompasses all of Vatnajökull glacier and extensive surrounding areas. These include the national parks previously existing at Skaftafell in the southwest and Jökulsárgljúfur in the north.</li>
-    <li>On 5 July 2019, Vatnajökull National Park was inscribed as a World Heritage Site.</li>
+    <li class="bold-font">Vatnajökull National Park is divided into four territories.</li>
+    <li class="bold-font">Vatnajökull is Europe's largest glacier outside the arctic, with a surface area of 8,100 km2.</li>
+    <li class="bold-font">It encompasses all of Vatnajökull glacier and extensive surrounding areas. These include the national parks previously existing at Skaftafell in the southwest and Jökulsárgljúfur in the north.</li>
+    <li class="bold-font">On 5 July 2019, Vatnajökull National Park was inscribed as a World Heritage Site.</li>
 </ul>
 
 <h3>Þingvellir</h3>
 <ul>
-    <li>The National Gallery of Iceland owns more than 150 paintings by Ásgrímur Jónsson that have Þingvellir as their subject.git</li>
-    <li>The name Þingvellir is derived from the Old Norse Þingvǫllr, from þing (“thing, assembly”) and vǫllr (“field”), meaning assembly fields.</li>
-    <li>Þingvellir is associated with the Althing, the national parliament of Iceland, which was established at the site in 930 AD.</li>
-    <li>Þingvellir was designated as a World Heritage Site in 2004.</li>
+    <li class="bold-font">The National Gallery of Iceland owns more than 150 paintings by Ásgrímur Jónsson that have Þingvellir as their subject.git</li>
+    <li class="bold-font">The name Þingvellir is derived from the Old Norse Þingvǫllr, from þing (“thing, assembly”) and vǫllr (“field”), meaning assembly fields.</li>
+    <li class="bold-font">Þingvellir is associated with the Althing, the national parliament of Iceland, which was established at the site in 930 AD.</li>
+    <li class="bold-font">Þingvellir was designated as a World Heritage Site in 2004.</li>
 </ul>
 
 <button id="highlighter">Highlight the last li of each ul</button>
 
+<script src="https://kit.fontawesome.com/317175159f.js" crossorigin="anonymous"></script>
+
 <script
-        src="https://code.jquery.com/jquery-3.4.1.slim.js"
-        integrity="sha256-BTlTdQO9/fascB1drekrDVkaKd9PkwBymMlHOiG+qLI="
-        crossorigin="anonymous">
-</script>
+        src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+        crossorigin="anonymous"></script>
 
 <script>
     $('#styler').click(function(e) {
@@ -94,12 +118,21 @@
     });
 
     $("h3").click(function () {
-        $(this).next().children().css("font-weight", "bold");
+        $(this).next().children().toggleClass("bold-font");
+        $(this).next().slideToggle();
     });
 
-    $("li").click(function () {
+    $("li").removeClass("bold-font").click(function () {
         $(this).parent().children().first().css("color", "blue")
     });
+
+    jQuery('#x').click(function() {
+        $(this).parent().hide();
+    });
+
+    $("ul").hide();
+
+    $("h2").hide().delay(8000).fadeIn();
 </script>
 
 </body>
