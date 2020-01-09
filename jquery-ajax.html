@@ -2,9 +2,46 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>jQuery AJAX</title>
 </head>
 <body>
-$END$
+    jQuery ajax requests
+
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script>
+        (function () {
+                "use strict";
+                $(document).ready(function () {
+
+                    // $.ajax("https://swapi.co/api/people/1")
+                    //     .done(function(obj){
+                    //         console.log(obj.name);
+                    //     });
+
+                    $.ajax("https://pokeapi.co/api/v2/pokemon/800/")
+                        .done(function (data,status, jqXhr) {
+                            console.log(data.name);
+                            console.log(status);
+                            // console.log(jqXhr);
+                        })
+                        .fail(function (potato,status,error) {
+                            console.log("call failed");
+                            console.log(status);
+                            console.log(error);
+                        })
+                        .always(function(){
+                            console.log("finally")
+                        })
+
+                    $.getJSON("https://icanhazdadjoke.com/")
+                        .done(function(data) {
+                            console.log(data.joke);
+                        })
+
+                });
+
+        })();
+    </script>
+
 </body>
 </html>
