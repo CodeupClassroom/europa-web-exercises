@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2019-01-15</title>
+    <style>
+        q {font-family: 'Roboto', sans-serif; font-style: italic}
+        p {float:right}
+        blockquote {background-color: #dbdbdb; padding: .5em; border-radius: 10px; border: solid 3px #eaeaea}
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="container">
+    <h1>&nbsp;</h1>
+    <p><img  height="30em" src="../img/logo.png">  2019.01.14</p>
+    <h1>Happy Wednesday, Europa</h1>
+    <hr/>
+
+    <h2>Thought for the day</h2>
+    <blockquote><q>You've got to go down a lot of wrong roads to find the
+      right one.</q> -
+     Bob Parsons</blockquote>
+    <h2>This Morning:</h2>
+    <ol>
+        <li>DOM Assessment</li>
+    </ol>
+
+    <h2>This Afternoon:</h2>
+    <ol>
+        <li>Continue open work time</li>
+        <li>Demos at 3pm - Weather Map, Personal Site, or Simple Simon</li>
+    </ol>
+
+
+    <h2>Reminders:</h2>
+    <ul>
+        <li>Next Friday is the end of the Grading Period, make sure to have all of your work up on GitHub</li>
+        <li>Thu, Jan 30th @ 6pm - Lou Rosenfeld (IA and UX expert) FireSide
+        Chat at iHeartMedia | RSVP now</li>
+    </ul>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+<script>
+    var hamsters = [
+        {
+            name: "Hamtaro",
+            heightInMM: 86,
+            fur: ['orange', 'white'],
+            gender: "male",
+            dateOfBirth: "August 6"
+        } , {
+            name: "Bijou",
+            heightInMM: 75,
+            fur: ['white'],
+            gender: "female",
+            dateOfBirth: "July 10"
+        } , {
+            name: "Oxnard",
+            heightInMM: 100,
+            fur: ['grey', 'white'],
+            gender: "male",
+            dateOfBirth: "May 3"
+        } , {
+            name: "Boss",
+            heightInMM: 120,
+            fur: ['brown', 'white'],
+            gender: "male",
+            dateOfBirth: "Spetember 21"
+        } , {
+            name: "Snoozer",
+            heightInMM: 85,
+            fur: ['brown', 'white', "pink"],
+            gender: "male",
+            dateOfBirth: "January 14"
+        }
+    ];
+    // Use the array above to calculate the average (mean) heightInMM of the ham-hams!
+    function averageHeight(arr) {
+        var total = 0;
+        // arr.forEach(function(hamHam) {
+        //     total += hamHam.heightInMM
+        // });
+
+        for(var i = 0; i < arr.length; i++){
+            total += arr[i].heightInMM
+        }
+        return total/arr.length;
+    }
+
+    console.log(averageHeight(hamsters));
+</script>
+</html>
