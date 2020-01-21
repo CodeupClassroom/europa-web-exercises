@@ -341,7 +341,18 @@
 
         // console.log(getGoldReindeer(reindeerList));
 
-
+        // Anagrams are words that share all the same letters
+        // Write a function (using modern js) called isAnagram
+        // that takes in two strings and returns true if they are
+        // anagrams of each other
+        // ex: isAnagram("listen","silent") returns true
+        let isAnagram = (word1, word2) => {
+            return (word1.toLowerCase().split('').sort().join() ===
+                    word2.toLowerCase().split('').sort().join());
+        }
+        console.log(isAnagram("diarrhea","airraid" ));
+        console.log(isAnagram("dog","God" ));
+        console.log(isAnagram("silent","listen" ));
 
 
 
